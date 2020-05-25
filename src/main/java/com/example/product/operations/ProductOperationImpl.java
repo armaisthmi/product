@@ -54,32 +54,32 @@ public class ProductOperationImpl implements ProductOperations {
     }
 
     @Override
-    public List<ProductModel> getProductsByClient(String client) {
-        return productRepository.groupByClient(client);
+    public List<ProductModel> getProductsByClient() {
+        return productRepository.groupByClient();
     }
 
     @Override
-    public List<ProductModel> getProductsByPrice(Integer price) {
-        return productRepository.groupByPrice(price);
+    public List<ProductModel> getProductsByPrice() {
+        return productRepository.groupByPrice();
     }
 
     @Override
-    public List<ProductModel> getProductsByColor(String color) {
-        return productRepository.groupByColor(color);
+    public List<ProductModel> getProductsByColor() {
+        return productRepository.groupByColor();
     }
 
     @Override
-    public List<ProductModel> getProductsBySize(Integer size) {
-        return productRepository.groupBySize(size);
+    public List<ProductModel> getProductsBySize() {
+        return productRepository.groupBySize();
     }
 
     @Override
-    public List<ProductModel> getProductsBySKU(Integer sku) {
-        return productRepository.groupBySku(sku);
+    public List<ProductModel> getProductsBySKU() {
+        return productRepository.groupBySku();
     }
 
     @Override
-    public List<ProductModel> getProductsBySeller(String seller) {
-        return productRepository.groupBySeller(seller);
+    public List<ProductModel> getProductsBySeller() {
+        return productRepository.groupBySeller();
     }
 }

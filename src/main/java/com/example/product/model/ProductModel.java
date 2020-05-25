@@ -17,7 +17,6 @@ public class ProductModel {
     @Column(name = "client")
     private String client;
 
-
     @Column(name="color")
     private String color;
 

@@ -11,10 +11,10 @@ public interface ProductOperations {
     ProductModel getProduct(Long id);
     ProductModel updateProduct(ProductModel product);
     void deleteProduct(Long id);
-    List<ProductModel> getProductsByClient(String client);
-    List<ProductModel> getProductsByPrice(Integer price);
-    List<ProductModel> getProductsByColor(String color);
-    List<ProductModel> getProductsBySize(Integer size);
-    List<ProductModel> getProductsBySKU(Integer sku);
-    List<ProductModel> getProductsBySeller(String seller);
+    List<ProductModel> getProductsByClient();
+    List<ProductModel> getProductsByPrice();
+    List<ProductModel> getProductsByColor();
+    List<ProductModel> getProductsBySize();
+    List<ProductModel> getProductsBySKU();
+    List<ProductModel> getProductsBySeller();
 }

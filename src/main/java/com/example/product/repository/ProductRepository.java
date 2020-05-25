@@ -3,7 +3,6 @@ package com.example.product.repository;
 import com.example.product.model.ProductModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -13,19 +12,19 @@ public interface ProductRepository extends JpaRepository<ProductModel,Long> {
     ProductModel findByProductId(Long id);
 
     @Query("Select p.productName,p.client,p.price from product p GROUP BY client")
-    List<ProductModel> groupByClient(@Param("client") String client);
+    List<ProductModel> groupByClient();
 
     @Query("Select p.productName,p.client,p.color from product p GROUP BY color")
-    List<ProductModel> groupByColor(@Param("color") String color);
+    List<ProductModel> groupByColor();
 
     @Query("Select p.productName,p.client,p.size from product p GROUP BY size")
-    List<ProductModel> groupBySize(@Param("size") Integer size);
+    List<ProductModel> groupBySize();
 
     @Query("Select p.productName,p.client,p.seller from product p GROUP BY seller")
-    List<ProductModel> groupBySeller(@Param("seller") String seller);
+    List<ProductModel> groupBySeller();
 
     @Query("Select p.productName,p.client,p.price from product p GROUP BY sku")
-    List<ProductModel> groupBySku(Integer sku);
+    List<ProductModel> groupBySku();
     @Query("Select p.productName,p.client,p.price from product p GROUP BY price")
-    List<ProductModel> groupByPrice(@Param("price") Integer price);
+    List<ProductModel> groupByPrice();
 }
